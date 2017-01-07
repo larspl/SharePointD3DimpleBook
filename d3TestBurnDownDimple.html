@@ -122,19 +122,18 @@
 			<script type="text/javascript" src="./d3/html/DayData.js"></script>
 			<script type="text/javascript" src="./d3/html/d3DimpleResourceBurnCharts.js"></script>
 
-		<script>
-	var sprintListDiv=d3.select("#dimpleChartContainer")
-				.append("div")
-				.attr("id", "SprintHolder");
-			var dropDown = sprintListDiv
+	<script>
+		var sprintListDiv=d3.select("#dimpleChartContainer")
+					.append("div")
+					.attr("id", "SprintHolder");
+					
+		var dropDown = sprintListDiv
 					.append("select")
 					.attr("id", "sprintlist");
 
-					
+		getResourceData("America");
 
-		   getResourceData("America");
-
-		</script>
+	</script>
 	
 	</body>
 </html>
