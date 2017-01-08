@@ -192,11 +192,7 @@ function processChart(whatever, Sprint, SprintArr)
 		};
       
   	function getResourceData(Sprint){
-
-		   
-		   var DaysofSprint = dimple.getUniqueValues(myData, "Sprint Day");
-		   console.log(DaysofSprint);
-		   console.log(DaysofSprint.length);
+	   		
 		   var SprintArr = dimple.getUniqueValues(myData, "sprint");
 		   console.log(SprintArr);
 					  
@@ -208,7 +204,8 @@ function processChart(whatever, Sprint, SprintArr)
 			options.text(function (d) { return d; })
 					.attr("value", function (d) { return d; });
 		   
-		   processChart(myData, Sprint, SprintArr, DaysofSprint);
+		   processChart(myData, Sprint, SprintArr);
+			
 				
 				//console.log(myData);
 				
