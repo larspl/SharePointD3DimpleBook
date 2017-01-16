@@ -115,16 +115,13 @@ function processChart(whatever, Sprint, SprintArr)
 				  }				  			      
 						      
 				  y.showGridlines = true;
-				  y.tickFormat="d";
 				  x.showGridlines = true;      
-					
-      
-					      
+
 			     var lines = myChart.addSeries("runcycle", dimple.plot.line, [x,y]);
 		
 		      		// Do a bit of styling to make it look nicer
-		        lines.lineMarkers = true;
-		       lines.lineWeight = 3;
+				  lines.lineMarkers = true;
+		          lines.lineWeight = 3;
 			  
 			  
 		     		// Colour the bars manually so they don't overwhelm the lines
