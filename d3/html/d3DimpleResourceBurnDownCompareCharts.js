@@ -1,8 +1,8 @@
 ﻿
 
-function processChart(whatever, SprintArr)
+function processChart(whatever)
 		{
-		  function setupChart(SprintArr, BurnDown){
+		  function setupChart(BurnDown){
 			  var SprintStart;
 			  var SprintEnd;
 			  
@@ -16,12 +16,12 @@ function processChart(whatever, SprintArr)
 			  var BundDownCommand;
 			  if (BurnDown)
 				  {
-					BurnDownText="Sprint Comparison by Day on BurnDown Chart";
+					BurnDownText="Sprint Comparison by Day BurnDown Chart";
 					BurnDownCommand="BurnUp";
 					}
 			  else
 					{
-					BurnDownText="Sprint Comparison by Day on BurnUp Chart";
+					BurnDownText="Sprint Comparison by Day BurnUp Chart";
 					BurnDownCommand="BurnDown";
 					}
 	
@@ -76,42 +76,21 @@ function processChart(whatever, SprintArr)
 				  }				  			      
 						      
 				  y.showGridlines = true;
-				  y.tickFormat="d";
 				  x.showGridlines = true;      
 					      
 					      
 			     var lines = myChart.addSeries("sprint", dimple.plot.line, [x,y]);
 				
 		      		// Do a bit of styling to make it look nicer
-		      lines.lineMarkers = true;
-		      lines.lineWeight = 3;
+				lines.lineMarkers = true;
+				lines.lineWeight = 3;
 			  
 			  
-		     		// Colour the bars manually so they don't overwhelm the lines
-		      myChart.assignColor("remaininghours", "black", "black", 0.15);
-		      
-		      // Here's how you add a legend for just one series.  Excluding the last parameter
-				      // will include every series or an array of series can be passed to select more than
-				      // one
-				      //chart.addLegend(150, 50, 1200, 200);
-			   var myLegend = myChart.addLegend(650, 50, 60, 800, "Right");
-							
-			  
-			  		//myChart.data=dimple.filterData(whatever,"Name",newFilterValues  );
-		      myChart.draw(2000);
+		
+			   var myLegend = myChart.addLegend(630, 50, 60, 100);
+		      myChart.draw();
 	
-			   var tmpText;
-				   if (BurnDown){     
-						tmpText="BurnDown Chart for Sprint: "  ;
-					}
-					else{
-						tmpText="Burnup Chart for Sprint: " ;
-					}		
-			  
-			  
-			
-				
-				
+					
 		       	function onToggleBurnDownClick(e) {
 					if (BurnDown){
 						BurnDown=0;
@@ -119,24 +98,19 @@ function processChart(whatever, SprintArr)
 					else {
 						BurnDown=1;
 						}
-					setupChart(SprintArr, BurnDown);					
+					setupChart(BurnDown);					
 					};
 						
 				
 			 };
 
-			 setupChart(SprintArr, 1);
+			 setupChart(1);
 	 
 		};
       
   	function getResourceData(Sprint){
-	 
-		   var SprintArr = dimple.getUniqueValues(myData, "sprint");
-		   console.log(SprintArr);
-					  
-		 
 		   
-		   processChart(myData, Sprint, SprintArr);
+		   processChart(myData);
 				
 				//console.log(myData);
 				
