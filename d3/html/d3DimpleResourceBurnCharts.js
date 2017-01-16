@@ -10,14 +10,10 @@ function processChart(whatever, Sprint, SprintArr)
 			  
 			  //Remove Prior Run
 			  $('svg').remove();
-			 // $('.chartLabel').remove();
 			  $('#buttonControls').remove();
 			  $('#buttonStateContainer').remove();
-			  
 			  $('#buttonToggleContainer').remove();
 			  $('#buttonToggleDaysorDatesContainer').remove();
-	  		 
-			
 			  
 			  var BurnDownText;
 			  var BundDownCommand;
@@ -94,11 +90,6 @@ function processChart(whatever, Sprint, SprintArr)
 			  
 			    var whateverSprint=dimple.filterData(whatever, "sprint", Sprint);	
 			 	
-				  SprintStart=whateverSprint[0].sprintstart;
-				  SprintEnd=whateverSprint[0].sprintend;
-				  console.log("SprintStart: " + SprintStart);
-				  console.log("SprintEnd: " + SprintEnd);
-				  
 				  var svg = dimple.newSvg("#dimpleChartContainer");
 			      var myChart = new dimple.chart(svg, whateverSprint);
 			      myChart.setBounds(100,50,600,430);
