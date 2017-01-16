@@ -122,33 +122,11 @@ function processChart(whatever, Sprint, SprintArr)
 		      		// Do a bit of styling to make it look nicer
 				  lines.lineMarkers = true;
 		          lines.lineWeight = 3;
-			  
-			  
-		     		// Colour the bars manually so they don't overwhelm the lines
-		        //myChart.assignColor("Remaining Hours", "black", "black", 0.55);
-		      
-		      // Here's how you add a legend for just one series.  Excluding the last parameter
-				      // will include every series or an array of series can be passed to select more than
-				      // one
-				      //chart.addLegend(150, 50, 1200, 200);
+		     
 			    var myLegend = myChart.addLegend(650, 50, 60, 800, "Right");
 			  	
 		        myChart.draw(2000);
-			  /*
-			   var tmpText;
-				   if (BurnDown){     
-						tmpText="BurnDown Chart for Sprint: " + Sprint ;
-					}
-					else{
-						tmpText="Burnup Chart for Sprint: " + Sprint ;
-					}		
-			  
-			  
-			  d3.select('#dimpleChartContainer').append('text')
-				.text(tmpText)
-				.attr("class", "chartLabel");     
 			
-				*/
 	        function onSprintButtonsClick() {
          		setupChart(d3.event.target.value,SprintArr, BurnDown, DaysorDates);
          		};
