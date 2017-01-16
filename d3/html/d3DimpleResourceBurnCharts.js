@@ -123,7 +123,7 @@ function processChart(whatever, Sprint, SprintArr)
 				  lines.lineMarkers = true;
 		          lines.lineWeight = 3;
 		     
-			    var myLegend = myChart.addLegend(650, 50, 60, 800, "Right");
+			    var myLegend = myChart.addLegend(650, 50, 60, 100, "Right");
 			  	
 		        myChart.draw(2000);
 			
