@@ -123,9 +123,9 @@ function processChart(whatever, Sprint, SprintArr)
 				  lines.lineMarkers = true;
 		          lines.lineWeight = 3;
 		     
-			    var myLegend = myChart.addLegend(650, 50, 60, 100, "Right");
+			    var myLegend = myChart.addLegend(640, 50, 60, 100);
 			  	
-		        myChart.draw(2000);
+		        myChart.draw();
 			
 	        function onSprintButtonsClick() {
          		setupChart(d3.event.target.value,SprintArr, BurnDown, DaysorDates);

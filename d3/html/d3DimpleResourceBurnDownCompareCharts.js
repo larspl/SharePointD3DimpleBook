@@ -12,7 +12,7 @@ function processChart(whatever, SprintArr)
 			  $('#buttonToggleContainer').remove();
 			
 			  
-			   var BurnDownText;
+			  var BurnDownText;
 			  var BundDownCommand;
 			  if (BurnDown)
 				  {
