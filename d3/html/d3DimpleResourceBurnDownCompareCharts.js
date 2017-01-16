@@ -108,7 +108,7 @@ function processChart(whatever)
 	 
 		};
       
-  	function getResourceData(Sprint){
+  	function getResourceData(){
 		   
 		   processChart(myData);
 				
