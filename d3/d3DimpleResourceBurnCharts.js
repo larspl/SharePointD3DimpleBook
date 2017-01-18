@@ -111,10 +111,7 @@ function processChart(whatever, Sprint, SprintArr) {
         }
 
         y.showGridlines = true;
-        y.tickFormat = "d";
         x.showGridlines = true;
-
-
 
         var lines = myChart.addSeries("runcycle", dimple.plot.line, [x, y]);
 
@@ -125,7 +122,7 @@ function processChart(whatever, Sprint, SprintArr) {
 
         var myLegend = myChart.addLegend(650, 50, 60, 800, "Right");
 
-        myChart.draw(2000);
+        myChart.draw();
 
         function onSprintButtonsClick() {
             setupChart(d3.event.target.value, SprintArr, BurnDown, DaysorDates);

@@ -1,5 +1,5 @@
-function processChart(whatever, SprintArr) {
-    function setupChart(SprintArr, BurnDown) {
+function processChart(whatever) {
+    function setupChart(BurnDown) {
         var SprintStart;
         var SprintEnd;
 
@@ -12,10 +12,10 @@ function processChart(whatever, SprintArr) {
         var BurnDownText;
         var BundDownCommand;
         if (BurnDown) {
-            BurnDownText = "Sprint Comparison by Day on BurnDown Chart";
+            BurnDownText = "Sprint Comparison by Day BurnDown Chart";
             BurnDownCommand = "BurnUp";
         } else {
-            BurnDownText = "Sprint Comparison by Day on BurnUp Chart";
+            BurnDownText = "Sprint Comparison by Day BurnUp Chart";
             BurnDownCommand = "BurnDown";
         }
 
@@ -79,13 +79,8 @@ function processChart(whatever, SprintArr) {
         lines.lineWeight = 3;
 
 
-        // Colour the bars manually so they don't overwhelm the lines
-        myChart.assignColor("remaininghours", "black", "black", 0.15);
-
         var myLegend = myChart.addLegend(650, 50, 60, 800, "Right");
 
-
-        //myChart.data=dimple.filterData(whatever,"Name",newFilterValues  );
         myChart.draw(2000);
 
         var tmpText;
@@ -102,13 +97,13 @@ function processChart(whatever, SprintArr) {
             } else {
                 BurnDown = 1;
             }
-            setupChart(SprintArr, BurnDown);
+            setupChart(BurnDown);
         };
 
 
     };
 
-    setupChart(SprintArr, 1);
+    setupChart( );
 
 };
 
@@ -131,7 +126,7 @@ function getListItems(listName, siteurl, success, failure) {
 
 
 
-function getResourceData(Sprint) {
+function getResourceData() {
 
     var listName = "SprintDaysDemo";
     var SiteUrl = _spPageContextInfo.webAbsoluteUrl;
@@ -204,14 +199,8 @@ function getResourceData(Sprint) {
         }
         console.log(myData);
 
-        var SprintArr = dimple.getUniqueValues(myData, "sprint");
-        console.log(SprintArr);
-        /*
-			   var DaysofSprint = dimple.getUniqueValues(myData, "sprintday");
-			   console.log(DaysofSprint);
-			   console.log(DaysofSprint.length);
-			   */
-        processChart(myData, SprintArr);
+       
+        processChart(myData);
 
 
 
