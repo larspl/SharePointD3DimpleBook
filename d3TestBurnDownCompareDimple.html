@@ -3,29 +3,30 @@
 <head>
 	<meta charset="utf-8"/>
 	<title></title>
-	<style text="text/css">
-			h1 
-		{
-			text-align:center;
-			font-family: Georgia;
-			font-size: x-large;
-		}
-		h2 
-		{
-			text-align:center;
-			font-family: Georgia;
-			font-size: large;
-		}
+<style text="text/css">
 		#dimpleChartContainer svg{
 			position: relative;
 			width: 900px;
 			height: 600px;
 			}
-			
 		#btnToggleBurnDown{
 			width: 85px;
 			}	   
-	
+		#tblHeaders{
+			position: relative;
+			top: 58px;
+			left: 100px;
+			}
+		.ctrlth{
+			font-size: 1.5em;
+			font-weight: 900;
+			color: darkblue;
+		}
+		#tblCommands{
+			position: relative;
+			top: 610px;
+			left: 600px;
+		}	
 		.dimple-custom-axis-title {
 			font-size: 1em !important;
 			font-weight: 700;
@@ -38,22 +39,6 @@
 			font-size: .8em !important;
 			font-weight: 700;
 		}
-		#tblHeaders{
-			position: relative;
-			top: 58px;
-			left: 100px;
-			
-			}
-		.ctrlth{
-			font-size: 1.5em;
-			font-weight: 900;
-			color: darkblue;
-		}
-		#tblCommands{
-			position: relative;
-			top: 610px;
-			left: 600px;
-		}	
 		button {
 			   border-top: 1px solid #96d1f8;
 			   background: #65a9d7;
@@ -85,10 +70,7 @@
 		   border-top-color: #1b435e;
 		   background: #1b435e;
 		   }	
-		
-	
-	</style>
-	<script src="./d3/jquery.min.js"></script>
+	</style>	<script src="./d3/jquery.min.js"></script>
 	<script src="./d3/d3.v4.min.js"></script>
 	<script src="./d3/dimple.v2.3.0.min.js"></script>
 	
