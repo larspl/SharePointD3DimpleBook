@@ -62,7 +62,7 @@ function processChart(whatever)
 			     var myChart = new dimple.chart(svg, whateverruncycle);
 			     myChart.setBounds(100,50,600,430);
 			 
-			      		// Add your x axis - nothing unusual here
+			     // Add your x axis - nothing unusual here
 			     var x = myChart.addCategoryAxis("x", "Day");
 			     x.addOrderRule("Day");
 				 						
