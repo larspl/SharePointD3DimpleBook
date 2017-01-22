@@ -4,9 +4,7 @@
 			width: 900px;
 			height: 600px;
 			}
-		#btnToggleBurnDown{
-			width: 85px;
-			}	   
+   
 		#tblHeaders{
 			position: relative;
 			top: 58px;
@@ -34,28 +32,31 @@
 			font-size: .8em !important;
 			font-weight: 700;
 		}
+		#btnToggleBurnDown{
+			width: 85px;
+			}			
 		button {
-			   border-top: 1px solid #96d1f8;
-			   background: #65a9d7;
-			   background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#6b94b0));
-			   background: -webkit-linear-gradient(top, #3e779d, #6b94b0);
-			   background: -moz-linear-gradient(top, #3e779d, #6b94b0);
-			   background: -ms-linear-gradient(top, #3e779d, #6b94b0);
-			   background: -o-linear-gradient(top, #3e779d, #6b94b0);
-			   padding: 3.5px 7px;
-			   -webkit-border-radius: 19px;
-			   -moz-border-radius: 19px;
-			   border-radius: 19px;
-			   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
-			   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
-			   box-shadow: rgba(0,0,0,1) 0 1px 0;
-			   text-shadow: rgba(0,0,0,.4) 0 1px 0;
-			   color: white;
-			   font-size: 13px;
-			   font-family: Georgia, Serif;
-			   text-decoration: none;
-			   vertical-align: middle;
-			   }
+		   border-top: 1px solid #96d1f8;
+		   background: #65a9d7;
+		   background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#6b94b0));
+		   background: -webkit-linear-gradient(top, #3e779d, #6b94b0);
+		   background: -moz-linear-gradient(top, #3e779d, #6b94b0);
+		   background: -ms-linear-gradient(top, #3e779d, #6b94b0);
+		   background: -o-linear-gradient(top, #3e779d, #6b94b0);
+		   padding: 3.5px 7px;
+		   -webkit-border-radius: 19px;
+		   -moz-border-radius: 19px;
+		   border-radius: 19px;
+		   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+		   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+		   box-shadow: rgba(0,0,0,1) 0 1px 0;
+		   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+		   color: white;
+		   font-size: 13px;
+		   font-family: Georgia, Serif;
+		   text-decoration: none;
+		   vertical-align: middle;
+		   }
 		 button:hover {
 		   border-top-color: #28597a;
 		   background: #28597a;
@@ -65,7 +66,8 @@
 		   border-top-color: #1b435e;
 		   background: #1b435e;
 		   }	
-	</style>
+	</style>	<script src="./d3/jquery.min.js"></script>
+
 
 	<script type="text/javascript" src="/_layouts/15/sp.runtime.js"></script>
 	<script type="text/javascript" src="/_layouts/15/sp.js"></script>
