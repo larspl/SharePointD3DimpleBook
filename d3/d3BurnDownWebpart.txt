@@ -69,10 +69,7 @@
 		   background: #28597a;
 		   color: #ccc;
 		   }
-		 button:active {
-		   border-top-color: #1b435e;
-		   background: #1b435e;
-		   }
+
 	</style>
 
   

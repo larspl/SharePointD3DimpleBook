@@ -62,13 +62,10 @@
 		   background: #28597a;
 		   color: #ccc;
 		   }
-		 button:active {
-		   border-top-color: #1b435e;
-		   background: #1b435e;
-		   }	
-	</style>	<script src="./d3/jquery.min.js"></script>
-
-
+		
+		
+	</style>	
+	
 	<script type="text/javascript" src="/_layouts/15/sp.runtime.js"></script>
 	<script type="text/javascript" src="/_layouts/15/sp.js"></script>
 	<script src="../d3/jquery.min.js"></script>
