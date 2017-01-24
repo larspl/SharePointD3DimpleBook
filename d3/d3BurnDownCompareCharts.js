@@ -1,4 +1,5 @@
-function processChart(whatever) {
+function processChart(whatever) 
+{
     function setupChart(BurnDown) {
         var SprintStart;
         var SprintEnd;
@@ -8,13 +9,15 @@ function processChart(whatever) {
         $('#buttonControls').remove();
         $('#buttonToggleContainer').remove();
 
-
         var BurnDownText;
         var BundDownCommand;
-        if (BurnDown) {
+        if (BurnDown) 
+		{
             BurnDownText = "Sprint Comparison by Day BurnDown Chart";
             BurnDownCommand = "BurnUp";
-        } else {
+        } 
+		else 
+		{
             BurnDownText = "Sprint Comparison by Day BurnUp Chart";
             BurnDownCommand = "BurnDown";
         }
@@ -49,7 +52,6 @@ function processChart(whatever) {
 
         var svg = dimple.newSvg("#dimpleChartContainer");
 
-
         whateverruncycle = dimple.filterData(whatever, "runcycle", ["Prod"])
         console.log(whateverruncycle);
 
@@ -61,16 +63,17 @@ function processChart(whatever) {
         x.addOrderRule("Day");
 
         // y axis changes for burndown and burnup
-        if (BurnDown) {
+        if (BurnDown) 
+		{
             var y = myChart.addMeasureAxis("y", "Remaining Hours");
-        } else {
+        } 
+		else 
+		{
             var y = myChart.addMeasureAxis("y", "Burned Hours Accumulator");
         }
 
         y.showGridlines = true;
-        y.tickFormat = "d";
         x.showGridlines = true;
-
 
         var lines = myChart.addSeries("sprint", dimple.plot.line, [x, y]);
 
@@ -78,28 +81,19 @@ function processChart(whatever) {
         lines.lineMarkers = true;
         lines.lineWeight = 3;
 
-
         var myLegend = myChart.addLegend(650, 50, 60, 800, "Right");
-
-        myChart.draw(2000);
-
-        var tmpText;
-        if (BurnDown) {
-            tmpText = "BurnDown Chart for Sprint: ";
-        } else {
-            tmpText = "Burnup Chart for Sprint: ";
-        }
-
-
+        myChart.draw();
+     
         function onToggleBurnDownClick(e) {
             if (BurnDown) {
                 BurnDown = 0;
-            } else {
+            } 
+			else 
+			{
                 BurnDown = 1;
             }
             setupChart(BurnDown);
         };
-
 
     };
 
