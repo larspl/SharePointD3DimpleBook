@@ -158,21 +158,27 @@
       
   	function getResourceData(Sprint){
 	   		
-		   var SprintArr = dimple.getUniqueValues(myData, "sprint");
-		   console.log(SprintArr);
-					  
-		   var options = dropDown.selectAll("option")
-				.data(SprintArr)
-					.enter()
-				.append("option");
-				
-			options.text(function (d) { return d; })
-					.attr("value", function (d) { return d; });
-		   
-		   processChart(myData, Sprint, SprintArr);
-			
-				
-				//console.log(myData);
+		var SprintArr = dimple.getUniqueValues(myData, "sprint");
+        console.log(SprintArr);
+        var options = dropDown.selectAll("option")
+            .data(SprintArr)
+            .enter()
+            .append("option");
+
+        options.text(function(d) {
+                return d;
+            })
+            .attr("value", function(d) {
+                return d;
+            });
+
+        console.log(JSON.stringify(myData));
+
+        if (Sprint == null) {
+            processChart(myData, SprintArr[0], SprintArr);
+        } else {
+            processChart(myData, Sprint, SprintArr);
+        }
 				
 		    
 		
