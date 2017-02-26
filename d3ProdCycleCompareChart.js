@@ -107,12 +107,10 @@
      
   	function getResourceData(){
 		   
-		   processChart(myData);
+		processChart(myData);
 				
 				//console.log(myData);
-				
-		    
-		
+
 	};
 	
 
