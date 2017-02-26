@@ -1,10 +1,17 @@
-	<style text="text/css">
+<style text="text/css">
 		#dimpleChartContainer svg{
 			position: relative;
 			width: 900px;
 			height: 600px;
 			}
-   
+		#prodCycleHolder{
+			position: relative;
+			left: 500px;
+			font-weight: 700;
+		}
+		#prodCyclelist{
+			width: 200px;
+		}
 		#tblHeaders{
 			position: relative;
 			top: 58px;
@@ -17,9 +24,9 @@
 		}
 		#tblCommands{
 			position: relative;
-			top: 610px;
-			left: 600px;
-		}	
+			top: 635px;
+			left: 500px;
+		}
 		.dimple-custom-axis-title {
 			font-size: 1em !important;
 			font-weight: 700;
@@ -32,9 +39,9 @@
 			font-size: .8em !important;
 			font-weight: 700;
 		}
-		#btnToggleBurnDown{
-			width: 85px;
-			}			
+		#btnToggleBurnDown, #btnToggleDaysorDates{
+			width: 100px;
+			}	   
 		button {
 		   border-top: 1px solid #96d1f8;
 		   background: #65a9d7;
@@ -52,7 +59,7 @@
 		   box-shadow: rgba(0,0,0,1) 0 1px 0;
 		   text-shadow: rgba(0,0,0,.4) 0 1px 0;
 		   color: white;
-		   font-size: 13px;
+		   font-size: 17px;
 		   font-family: Georgia, Serif;
 		   text-decoration: none;
 		   vertical-align: middle;
@@ -63,35 +70,37 @@
 		   color: #ccc;
 		   }
 		
-		
-	</style>	
-	
+	</style>
+
+  
 	<script type="text/javascript" src="/_layouts/15/sp.runtime.js"></script>
 	<script type="text/javascript" src="/_layouts/15/sp.js"></script>
 	<script src="../d3/jquery.min.js"></script>
 	<script src="../d3/d3.v4.min.js"></script>
 	<script src="../d3/dimple.v2.3.0.min.js"></script>
-	<script type="text/javascript" src="../d3/d3BurnDownCompareCharts.js"></script>
-	<script type="text/javascript">
-
-			var sprintListDiv=d3.select("#controlContainer")
-				.append("div")
-				.attr("id", "SprintHolder");
-			var dropDown = sprintListDiv
-					.append("select")
-					.attr("id", "sprintlist");
-
-					
-
-		   getResourceData();
-
-</script>
+	<script type="text/javascript" src="../d3/d3RampUpBurnDownCharts.js"></script>
 	
-	
-	<div id="dimpleChartContainer">
+		<div id="dimpleChartContainer">
+	        <div id="dropDownContainer"></div>
 			<div id="controlContainer"></div>
 	</div>
 
 		
+	<script type="text/javascript">
+
+			var prodCycleListDiv=d3.select("#dropDownContainer")
+					.append("div")
+					.attr("id", "prodCycleHolder");
+					
+		var dropDown = prodCycleListDiv
+					.append("select")
+					.attr("id", "prodCyclelist");
+
+		getResourceData("Cycle_1701");
+
+	</script>
+	
+	
+	
 	
 	
