@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title></title>
+	<style text="text/css">
+			h1 
+		{
+			text-align:center;
+			font-family: Georgia;
+			font-size: x-large;
+		}
+		h2 
+		{
+			text-align:center;
+			font-family: Georgia;
+			font-size: large;
+		}
+		#dimpleChartContainer svg{
+	
+			position: relative;
+			width: 900px;
+			height: 600px;
+			
+			}
+			
+		#SprintHolder{
+			position: relative;
+			left: 500px;
+		}
+		#sprintlist{
+			width: 200px;
+		}
+		#btnToggleBurnDown, #btnToggleDaysorDates{
+			width: 100px;
+			}	   
+		button {
+			   border-top: 1px solid #96d1f8;
+			   background: #65a9d7;
+			   background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#6b94b0));
+			   background: -webkit-linear-gradient(top, #3e779d, #6b94b0);
+			   background: -moz-linear-gradient(top, #3e779d, #6b94b0);
+			   background: -ms-linear-gradient(top, #3e779d, #6b94b0);
+			   background: -o-linear-gradient(top, #3e779d, #6b94b0);
+			   padding: 3.5px 7px;
+			   -webkit-border-radius: 19px;
+			   -moz-border-radius: 19px;
+			   border-radius: 19px;
+			   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+			   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+			   box-shadow: rgba(0,0,0,1) 0 1px 0;
+			   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+			   color: white;
+			   font-size: 17px;
+			   font-family: Georgia, Serif;
+			   text-decoration: none;
+			   vertical-align: middle;
+			   }
+		 button:hover {
+		   border-top-color: #28597a;
+		   background: #28597a;
+		   color: #ccc;
+		   }
+		 button:active {
+		   border-top-color: #1b435e;
+		   background: #1b435e;
+		   }
+		.dimple-custom-axis-title {
+			font-size: 1em !important;
+			font-weight: 700;
+			}
+		.dimple-custom-axis-label{
+			font-size: 1.2em !important;
+			font-weight: 600;
+			}
+		.dimple-legend-text{
+			font-size: .8em !important;
+			font-weight: 700;
+		}
+		#tblHeaders{
+			position: relative;
+			top: 58px;
+			left: 100px;
+			
+			}
+		.ctrlth{
+			font-size: 1.5em;
+			font-weight: 900;
+			color: darkblue;
+		}
+		#tblCommands{
+			position: relative;
+			top: 610px;
+			left: 600px;
+		}	
+		#SprintHolder select{
+			font-weight: 700;
+			}
+		
+	
+	</style>
+	<script src="./d3/jquery.min.js"></script>
+	<script src="./d3/d3.v4.min.js"></script>
+	<script src="./d3/dimple.v2.3.0.min.js"></script>
+	
+	</head>
+	<body>
+	
+		<div id="dimpleChartContainer">
+			<div id="controlContainer"></div>
+		</div>
+		<script type="text/javascript" src="ProductionCycleData.js"></script>
+		<script type="text/javascript" src="d3ProdCycleCompareChart.js"></script>
+		<script>
+		   getResourceData();
+
+		</script>
+	
+	</body>
+</html>
