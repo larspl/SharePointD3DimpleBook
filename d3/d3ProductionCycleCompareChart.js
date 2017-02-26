@@ -142,7 +142,7 @@ function getResourceData() {
         var obj;
         // Add all the new items
         for (var i = 0; i < items.length; i++) {
-            TempHold = items[i].sprintday;
+            TempHold = items[i].ProdDay;
             ProdDay = TempHold.substr(0, 10);
             obj = {
                     "Prod Cycle": items[i].Title,

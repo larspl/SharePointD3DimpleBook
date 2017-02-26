@@ -4,14 +4,7 @@
 			width: 900px;
 			height: 600px;
 			}
-		#prodCycleHolder{
-			position: relative;
-			left: 500px;
-			font-weight: 700;
-		}
-		#prodCyclelist{
-			width: 200px;
-		}
+		
 		#tblHeaders{
 			position: relative;
 			top: 58px;
@@ -81,23 +74,11 @@
 	<script type="text/javascript" src="../d3/d3ProductionCycleCompareChart.js"></script>
 	
 		<div id="dimpleChartContainer">
-	        <div id="dropDownContainer"></div>
 			<div id="controlContainer"></div>
 	</div>
 
-		
 	<script type="text/javascript">
-
-			var prodCycleListDiv=d3.select("#dropDownContainer")
-					.append("div")
-					.attr("id", "prodCycleHolder");
-					
-		var dropDown = prodCycleListDiv
-					.append("select")
-					.attr("id", "prodCyclelist");
-
-		getResourceData("Cycle_1701");
-
+		getResourceData();
 	</script>
 	
 	
