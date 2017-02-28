@@ -22,7 +22,7 @@
 		}
 		.dimple-custom-axis-title {
 			font-size: 1em !important;
-			font-weight: 700;
+			font-weight: 600;
 			}
 		.dimple-custom-axis-label{
 			font-size: 1.2em !important;
@@ -30,7 +30,7 @@
 			}
 		.dimple-legend-text{
 			font-size: .8em !important;
-			font-weight: 700;
+			font-weight: 600;
 		}
 		#btnToggleBurnDown, #btnToggleDaysorDates{
 			width: 100px;
