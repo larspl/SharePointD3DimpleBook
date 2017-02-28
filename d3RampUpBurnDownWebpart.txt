@@ -6,9 +6,9 @@
 			}
 		#prodCycleHolder{
 			position: relative;
-			left: 500px;
-			top: 20px;
-			font-weight: 700;
+			left: 585px;
+			top: 90px;
+			font-weight: 600;
 		}
 		#prodCyclelist{
 			width: 200px;
@@ -30,7 +30,7 @@
 		}
 		.dimple-custom-axis-title {
 			font-size: 1em !important;
-			font-weight: 700;
+			font-weight: 600;
 			}
 		.dimple-custom-axis-label{
 			font-size: 1.2em !important;
