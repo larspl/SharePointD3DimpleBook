@@ -17,7 +17,7 @@
 		}
 		#tblCommands{
 			position: relative;
-			top: 605px;
+			top: 610px;
 			left: 585px;
 		}
 		.dimple-custom-axis-title {
