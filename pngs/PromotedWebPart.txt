@@ -1,0 +1,74 @@
+<style>
+
+/*  --------------------------------------------------------------------------------
+     SharePoint Tile Resizer
+    --------------------------------------------------------------------------------
+     This solution found at: http://sharepoint.stackexchange.com/a/163178/43827
+    -------------------------------------------------------------------------------- */
+
+/*  tile row height */
+/*
+div.ms-promlink-body {
+    height: 250px;
+}
+*/
+/*  tile dimensions, including inter-tile margin */
+div.ms-tileview-tile-root {
+    width: 268px !important;
+    height: 268px !important;
+}
+
+/*  tile and title( + description) overlay dimensions */
+div.ms-tileview-tile-content, div.ms-tileview-tile-detailsBox {
+    width: 250px !important;
+    height: 170px !important;
+}
+
+/*  renders detailsBox effectively invisible at rest, and ensures that it returns to invisible after a short delay on mouseout  */
+/*
+div.ms-tileview-tile-detailsBox {
+    background-color: transparent;
+    transition: background-color 0s linear 0.3s;
+}
+*/
+/*  restores the detailsBox overlay color on mousein    */
+div.ms-tileview-tile-content:hover > a > div.ms-tileview-tile-detailsBox {
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: background-color 0s linear 0s;
+}
+
+/*  tile background image dimensions */
+div.ms-tileview-tile-content > a > img {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/*  title and description text  */
+
+ul.ms-tileview-tile-detailsListMedium {
+    height: 250px;
+    padding: 5px 8px 8px;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+/*  description text class  */
+
+li.ms-tileview-tile-descriptionMedium {
+    padding-top: 13px;
+    font-size: 16px;
+}
+
+/*  title text when description not shown   */
+div.ms-tileview-tile-titleTextMediumCollapsed {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 200px;
+    height: 37px;
+    position: absolute;
+    top: -16px;
+    left: 0px;
+    padding: 5px 8px 0px;
+    font-size: 16px;
+    line-height: 17px;
+}
+</style>
