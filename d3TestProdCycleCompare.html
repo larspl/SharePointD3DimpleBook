@@ -1,4 +1,9 @@
-<style text="text/css">
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title></title>
+	<style text="text/css">
 		#dimpleChartContainer svg{
 			position: relative;
 			width: 900px;
@@ -63,25 +68,24 @@
 		   color: #ccc;
 		   }
 		
+	
 	</style>
-
-  
-	<script type="text/javascript" src="/_layouts/15/sp.runtime.js"></script>
-	<script type="text/javascript" src="/_layouts/15/sp.js"></script>
-	<script src="../d3/jquery.min.js"></script>
-	<script src="../d3/d3.v4.min.js"></script>
-	<script src="../d3/dimple.v2.3.0.min.js"></script>
-	<script type="text/javascript" src="../d3/d3ProductionCycleCompareChart.js"></script>
+	<script src="./d3/jquery.min.js"></script>
+	<script src="./d3/d3.v4.min.js"></script>
+	<script src="./d3/dimple.v2.3.0.min.js"></script>
+	
+	</head>
+	<body>
 	
 		<div id="dimpleChartContainer">
 			<div id="controlContainer"></div>
-	</div>
+		</div>
+		<script type="text/javascript" src="ProdCycleData.js"></script>
+		<script type="text/javascript" src="d3ProdCycleCompareChart.js"></script>
+		<script>
+		   getResourceData();
 
-	<script type="text/javascript">
-		getResourceData();
-	</script>
+		</script>
 	
-	
-	
-	
-	
+	</body>
+</html>
