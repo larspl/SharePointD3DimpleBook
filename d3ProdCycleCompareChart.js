@@ -8,7 +8,7 @@
         $('#buttonToggleContainer').remove();
 
         var RampUpText;
-        var BundDownCommand;
+        var RampUpCommand;
         if (RampUp) 
 		{
 			RampUpText = "Production Cycle Comparison by Day RampUp Chart";
