@@ -49,11 +49,11 @@ function processChart(whatever)
             .html(RampUpCommand)
             .on("click", onToggleRampUpClick);
 
-        var svg = dimple.newSvg("#dimpleChartContainer");
 
         whateverRunType = dimple.filterData(whatever, "Run Type", ["Prod"])
         console.log(whateverRunType);
 
+        var svg = dimple.newSvg("#dimpleChartContainer");
         var myChart = new dimple.chart(svg, whateverRunType);
         myChart.setBounds(100, 50, 600, 430);
 
