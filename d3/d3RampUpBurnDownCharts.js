@@ -189,7 +189,7 @@ function getResourceData(ProdCycle) {
         var items = data.d.results;
         var TempHold = "";
         var ProdDay = "";
-        var ProdEndInd;
+      
         //console.log(items);
 
         var obj;
