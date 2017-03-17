@@ -1,5 +1,8 @@
-﻿function processChart(whatever, ProdCycle, ProdCycleArr)		{
-		  
+﻿
+var prodCycleListDiv;
+var dropDown;
+function processChart(whatever, ProdCycle, ProdCycleArr)		{
+
   function setupChart(ProdCycle, ProdCycleArr, RampUp, DaysorDates){
 	 	  
 	  //Remove Prior Run
@@ -163,6 +166,13 @@
 	   		
 		var ProdCycleArr = dimple.getUniqueValues(myData, "Prod Cycle");
         console.log(ProdCycleArr);
+		prodCycleListDiv=d3.select("#dimpleChartContainer")
+					.append("div")
+					.attr("id", "prodCycleHolder");
+					
+		dropDown = prodCycleListDiv
+					.append("select")
+					.attr("id", "prodCyclelist");
         var options = dropDown.selectAll("option")
             .data(ProdCycleArr)
             .enter()

@@ -89,14 +89,6 @@
 		
 	<script type="text/javascript">
 
-			var prodCycleListDiv=d3.select("#dropDownContainer")
-					.append("div")
-					.attr("id", "prodCycleHolder");
-					
-		var dropDown = prodCycleListDiv
-					.append("select")
-					.attr("id", "prodCyclelist");
-
 		getResourceData("Cycle_1701");
 
 	</script>
