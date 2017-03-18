@@ -1,3 +1,5 @@
+var prodCycleListDiv;
+var dropDown;
 function processChart(whatever, ProdCycle, ProdCycleArr)		{
 		  
   function setupChart(ProdCycle, ProdCycleArr, RampUp, DaysorDates){
@@ -189,7 +191,7 @@ function getResourceData(ProdCycle) {
         var items = data.d.results;
         var TempHold = "";
         var ProdDay = "";
-      
+        var ProdEndInd;
         //console.log(items);
 
         var obj;
@@ -212,6 +214,15 @@ function getResourceData(ProdCycle) {
 		
       var ProdCycleArr = dimple.getUniqueValues(myData, "Prod Cycle");
         console.log(ProdCycleArr);
+		
+		prodCycleListDiv=d3.select("#dropDownContainer")
+					.append("div")
+					.attr("id", "prodCycleHolder");
+					
+		dropDown = prodCycleListDiv
+					.append("select")
+					.attr("id", "prodCyclelist");
+
         var options = dropDown.selectAll("option")
             .data(ProdCycleArr)
             .enter()
