@@ -159,9 +159,11 @@ function getResourceData() {
   
         processChart(myData);
 
-    }, function(data) {
-        alert("Ooops, an error occured. Please try again");
-
+},  function(xhr) {
+				  alert( "The server has thrown an error. Please check console log for details!" );           
+				  console.log( "Error: " + xhr.statusText );            
+				  console.log( "Status: " + xhr.status );    
+   
 
 
 
