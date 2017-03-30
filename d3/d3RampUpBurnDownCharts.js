@@ -189,12 +189,11 @@ function getResourceData(ProdCycle) {
 
         var myData = [];
         var items = data.d.results;
+		//console.log(items);
         var TempHold = "";
         var ProdDay = "";
-        var ProdEndInd;
-        //console.log(items);
-
         var obj;
+		
         // Add all the new items
         for (var i = 0; i < items.length; i++) {
             TempHold = items[i].ProdDay;
